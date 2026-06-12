@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,8 +33,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'users',
     'Products',
-    'admin_interface',
-    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,12 +77,12 @@ WSGI_APPLICATION = 'site_Knyazev.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'online_mag',
-        'USER': 'knaz',
-        'PASSWORD': 360294,
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB', 'mydatabase'),
+        'USER': os.getenv('POSTGRES_USER', 'myuser'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'mypassword'),
+        'HOST': 'db', # <-- ИМЯ СЕРВИСА ИЗ DOCKER-COMPOSE
+        'PORT': '5432',
     }
 }
 
@@ -139,4 +137,9 @@ SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+# ... остальные настройки ...
+
+LOGIN_REDIRECT_URL = '/users/'
+LOGOUT_REDIRECT_URL = '/users/'
 

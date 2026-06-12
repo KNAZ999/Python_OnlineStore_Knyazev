@@ -4,7 +4,214 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8edce0cc-335d-4148-a4ec-3c6487f024a4" name="Changes" comment="Реализован импорт и экспорт остатков товаров через команды" />
+    <list default="true" id="8edce0cc-335d-4148-a4ec-3c6487f024a4" name="Changes" comment="Реализован импорт и экспорт остатков товаров через команды">
+      <change afterPath="$PROJECT_DIR$/Cart/templates/Cart/cart_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cart/templates/Cart/order_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/templates/add_to_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/templates/Cart/add_to_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/templates/place_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/templates/Cart/place_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cart/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products/templates/products/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Products/templates/products/product_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_Knyazev/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/site_Knyazev/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_Knyazev/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/site_Knyazev/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/autocomplete.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/autocomplete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/changelists.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/changelists.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/dark_mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/dark_mode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/forms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/nav_sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/nav_sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/responsive_rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/responsive_rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/unusable_password_field.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/unusable_password_field.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/LICENSE-SELECT2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/css/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/css/widgets.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-hidelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-hidelink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-no.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-no.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-viewlink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-viewlink.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/SelectBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/autocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/cancel.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/cancel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/change_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/change_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/collapse.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/collapse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/inlines.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/inlines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/jquery.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/jquery.init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/nav_sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/nav_sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/popup_response.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/popup_response.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/urlify.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/urlify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bs.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/dsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/dsb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hsb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hy.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/is.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/is.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ka.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/mk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ne.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ne.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ps.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/collapsible-inlines/collapsible-inlines.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/collapsible-inlines/collapsible-inlines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/admin-interface.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/admin-interface.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/change-form.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/change-form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/changelist.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/changelist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/fieldsets.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/fieldsets.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/file-upload.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/file-upload.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/inlines.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/inlines.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/jquery.ui.tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/jquery.ui.tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/language-chooser.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/language-chooser.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/list-filter-dropdown.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/list-filter-dropdown.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/list-filter.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/list-filter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/modules.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/modules.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/nav-sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/nav-sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/object-tools.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/object-tools.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/paginator.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/paginator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/recent-actions.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/recent-actions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/sticky-form-controls.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/sticky-form-controls.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/tabbed-changeform.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/tabbed-changeform.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/ckeditor.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/ckeditor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/import-export.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/import-export.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/json-widget.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/json-widget.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/modeltranslation.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/modeltranslation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/rangefilter.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/rangefilter.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/sorl-thumbnail.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/sorl-thumbnail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/streamfield.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/streamfield.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/tabbed-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/tabbed-admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/third-party/tinymce.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/third-party/tinymce.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/css/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/css/widgets.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/dropdown-filter/dropdown-filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/dropdown-filter/dropdown-filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/favico/favico-0.3.10-patched.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/favico/favico-0.3.10-patched.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/favico/favico-0.3.10-patched.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/favico/favico-0.3.10-patched.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/favico/favico-env.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/favico/favico-env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/foldable-apps/foldable-apps.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/foldable-apps/foldable-apps.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/foldable-apps/foldable-apps.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/foldable-apps/foldable-apps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/language-chooser/language-chooser.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/language-chooser/language-chooser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/magnific-popup/jquery.magnific-popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/magnific-popup/jquery.magnific-popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/magnific-popup/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/magnific-popup/magnific-popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/related-modal/related-modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/related-modal/related-modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/related-modal/related-modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/related-modal/related-modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin_interface/tabbed-changeform/tabbed-changeform.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin_interface/tabbed-changeform/tabbed-changeform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_gecko.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_gecko.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_ie7.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_ie7.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/editor_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/skin.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/light/skin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/colorfield/colorfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/colorfield/colorfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/colorfield/coloris/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/colorfield/coloris/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/colorfield/coloris/coloris.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/colorfield/coloris/coloris.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/colorfield/coloris/coloris.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/colorfield/coloris/coloris.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/colorfield/coloris/coloris.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/colorfield/coloris/coloris.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/colorfield/coloris/coloris.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/colorfield/coloris/coloris.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/streamfield/admin_popup_response.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/streamfield/admin_popup_response.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/streamfield/js/admin_popup_response.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/streamfield/js/admin_popup_response.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +228,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KNAZ999&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KNAZ999/Python_OnlineStore_Knyazev.git&quot;,
+    &quot;accountId&quot;: &quot;269b4d51-d274-43f7-8fca-3b3c492b0f02&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -29,26 +248,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.RunServer.executor": "Run",
-    "Python.forms.executor": "Run",
-    "Python.views.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrator/PycharmProjects/Python_OnlineStore_Knyazev/site_Knyazev/manage.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.RunServer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.forms.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;Python.views.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;online-store-part2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/PycharmProjects/Python_OnlineStore_Knyazev/site_Knyazev/manage.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\Python_OnlineStore_Knyazev\Cart\templates\Cart" />
       <recent name="C:\Users\Administrator\PycharmProjects\Python_OnlineStore_Knyazev\products" />
       <recent name="C:\Users\Administrator\PycharmProjects\Python_OnlineStore_Knyazev" />
       <recent name="C:\Users\Administrator\PycharmProjects\Python_OnlineStore_Knyazev\users" />
       <recent name="C:\Users\Administrator\PycharmProjects\Python_OnlineStore_Knyazev\templates\products" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.forms">
+  <component name="RunManager" selected="Python.manage (1)">
     <configuration name="forms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_OnlineStore_Knyazev" />
       <option name="ENV_FILES" value="" />
@@ -63,6 +286,50 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cart/forms.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manage (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_OnlineStore_Knyazev" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/site_Knyazev" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/site_Knyazev/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_OnlineStore_Knyazev" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -95,6 +362,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.manage (1)" />
+        <item itemvalue="Python.manage" />
         <item itemvalue="Python.views" />
         <item itemvalue="Python.forms" />
       </list>
@@ -126,6 +395,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="Dockerfile" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Реализован импорт и экспорт остатков товаров через команды" />
