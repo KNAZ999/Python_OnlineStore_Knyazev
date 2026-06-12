@@ -1,20 +1,30 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product, Category
+from django.db.models import Sum
+from Cart.models import Cart  # ← ДОБАВЛЕНО! Это исправит ошибку
 
-def product_list(request, category_slug=None):
-    category = None
-    categories = Category.objects.all()
-    products = Product.objects.filter(available=True)
 
-    if category_slug:
-        category = get_object_or_404(Category, slug=category_slug)
-        products = products.filter(category=category)
+def product_list(request):
+    products = Product.objects.all()
 
-    return render(request, 'products/product_list.html', {
-        'category': category,
-        'categories': categories,
-        'products': products
+    # Подсчёт количества товаров в корзине
+    cart_count = 0
+    if request.user.is_authenticated:
+        cart = Cart.objects.filter(user=request.user).first()
+        if cart:
+            cart_count = cart.items.aggregate(total=Sum('quantity'))['total'] or 0
+    else:
+        session_id = request.session.session_key
+        if session_id:
+            cart = Cart.objects.filter(session_id=session_id).first()
+            if cart:
+                cart_count = cart.items.aggregate(total=Sum('quantity'))['total'] or 0
+
+    return render(request, 'Products/product_list.html', {
+        'products': products,
+        'cart_count': cart_count
     })
+
 
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)

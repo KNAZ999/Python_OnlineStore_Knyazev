@@ -1,33 +1,138 @@
+"""
+Представления для работы с корзиной и заказами.
+Все view-функции используют сервисные функции из Cart/services.py.
+"""
+
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
 from Products.models import Product
-from .forms import CartForm
-from .models import Cart
+from .models import Cart, Order
+from django.contrib import messages
+from django.db.models import Sum
+from .services import place_order_service
+
+
+def _get_cart(request):
+    """
+    Получает корзину для пользователя или анонимного клиента.
+
+    :param request: HTTP-запрос
+    :return: Объект корзины (Cart)
+    """
+    if request.user.is_authenticated:
+        cart, created = Cart.objects.get_or_create(user=request.user)
+        return cart
+    else:
+        session_id = request.session.session_key
+        if not session_id:
+            request.session.create()
+            session_id = request.session.session_key
+        cart, created = Cart.objects.get_or_create(
+            session_id=session_id,
+            defaults={'user': None}
+        )
+        return cart
+
+
+def add_to_cart(request, product_id):
+    """
+    Добавляет товар в корзину и перенаправляет на страницу каталога.
+
+    :param request: HTTP-запрос
+    :param product_id: Идентификатор товара
+    """
+    product = get_object_or_404(Product, id=product_id)
+    cart = _get_cart(request)
+    cart.add_item(product, quantity=1)
+    messages.success(request, f'Товар "{product.name}" добавлен в корзину')
+    return redirect('Products:product_list')
+
+
+def remove_from_cart(request, product_id):
+    """
+    Удаляет товар из корзины и перенаправляет на страницу корзины.
+
+    :param request: HTTP-запрос
+    :param product_id: Идентификатор товара
+    """
+    cart = _get_cart(request)
+    cart.remove_item(product_id)
+    messages.info(request, 'Товар удалён из корзины')
+    return redirect('Cart:cart_detail')
+
+
+def clear_cart(request):
+    """
+    Очищает корзину и перенаправляет на страницу корзины.
+
+    :param request: HTTP-запрос
+    """
+    cart = _get_cart(request)
+    cart.clear()
+    messages.success(request, 'Корзина очищена')
+    return redirect('Cart:cart_detail')
+
+
+def cart_detail(request):
+    """
+    Отображает страницу корзины пользователя.
+
+    :param request: HTTP-запрос
+    :return: HTTP-ответ с шаблоном корзины
+    """
+    cart = _get_cart(request)
+    return render(request, 'Cart/cart_detail.html', {'cart': cart})
+
 
 def place_order(request):
-    # Пока заглушка
-    return render(request, 'Cart/place_order.html')
+    """
+    Оформляет заказ на основе корзины.
+    Использует place_order_service для проверки и сохранения заказа.
 
-@login_required
-def add_to_cart(request):
+    :param request: HTTP-запрос
+    :return: HTTP-ответ с формой или перенаправлением
+    """
+    cart = _get_cart(request)
+
+    if not cart.items.exists():
+        messages.error(request, 'Корзина пуста')
+        return redirect('Cart:cart_detail')
+
     if request.method == 'POST':
-        form = CartForm(request.POST)
-        if form.is_valid():
-            product_id = form.cleaned_data['product'].id  # Получаем ID товара
-            quantity = form.cleaned_data['quantity']
+        name = request.POST.get('name')
+        address = request.POST.get('address')
+        email = request.POST.get('email')
 
-            # Получаем или создаём корзину пользователя
-            cart, created = Cart.objects.get_or_create(user=request.user)
+        if not all([name, address, email]):
+            messages.error(request, 'Пожалуйста, заполните все поля')
+            return render(request, 'Cart/place_order.html', {'cart': cart})
 
-            # Находим товар
-            product = get_object_or_404(Product, id=product_id)
+        try:
+            order = place_order_service(
+                cart=cart,
+                name=name,
+                address=address,
+                email=email,
+                user=cart.user if cart.user else None
+            )
+            messages.success(request, 'Заказ успешно оформлен!')
+            return redirect('Cart:order_list')
+        except ValueError as e:
+            messages.error(request, str(e))
+            return render(request, 'Cart/place_order.html', {'cart': cart})
 
-            # Добавляем товар в корзину
-            cart.add_item(product, quantity)
+    return render(request, 'Cart/place_order.html', {'cart': cart})
 
-            return redirect('Products:product_list')  # Перенаправляем в каталог
+
+def order_list(request):
+    """
+    Отображает список заказов пользователя.
+
+    :param request: HTTP-запрос
+    :return: HTTP-ответ со списком заказов
+    """
+    if request.user.is_authenticated:
+        orders = Order.objects.filter(user=request.user).order_by('-created_at')
     else:
-        # При GET-запросе форма создаётся без данных
-        form = CartForm()
+        orders = Order.objects.filter(cart__session_id=request.session.session_key).order_by('-created_at')
 
-    return render(request, 'Cart/add_to_cart.html', {'form': form})
+    return render(request, 'Cart/order_list.html', {'orders': orders})

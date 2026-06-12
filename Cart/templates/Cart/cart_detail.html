@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f8f9fa; padding: 40px 0; }
+        .cart-container { max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .cart-item { padding: 20px 0; border-bottom: 1px solid #eee; }
+        .cart-item:last-child { border-bottom: none; }
+        .btn-remove { color: #dc3545; text-decoration: none; }
+        .btn-remove:hover { color: #bb2d3b; }
+        .cart-total { font-size: 1.25rem; font-weight: bold; margin-top: 25px; border-top: 2px solid #dee2e6; padding-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cart-container">
+            <h2 class="mb-4"><i class="fas fa-shopping-cart"></i> Моя корзина</h2>
+
+            {% if cart.items.all %}
+                {% for item in cart.items.all %}
+                    <div class="cart-item">
+                        <div>
+                            <h5>{{ item.product.name }}</h5>
+                            <p>Цена: {{ item.product.price }} ₽ × {{ item.quantity }} = <strong>{{ item.total_price }} ₽</strong></p>
+                        </div>
+                        <form method="post" action="{% url 'Cart:remove_from_cart' item.product.id %}" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                <i class="fas fa-trash"></i> Удалить
+                            </button>
+                        </form>
+                    </div>
+                {% endfor %}
+
+                <div class="cart-total">
+                    Итого: {{ cart.get_total_price }} ₽
+                </div>
+
+                <div class="mt-4">
+                    <form method="post" action="{% url 'Cart:place_order' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success btn-lg">Оформить заказ</button>
+                    </form>
+                </div>
+            {% else %}
+                <div class="alert alert-info text-center py-4">
+                    <h5><i class="fas fa-inbox"></i> Ваша корзина пуста</h5>
+                    <a href="{% url 'Products:product_list' %}" class="btn btn-primary mt-2">Перейти в каталог</a>
+                </div>
+            {% endif %}
+
+            <a href="{% url 'Products:product_list' %}" class="btn btn-secondary mt-4">
+                <i class="fas fa-arrow-left"></i> Продолжить покупки
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
